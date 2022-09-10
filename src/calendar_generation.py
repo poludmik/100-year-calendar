@@ -15,6 +15,9 @@ yearcounter = 0
 rightshift = 0
 downshift = 0
 
+year_rect_color = (150, 150, 150)
+year_rect_outline = (0, 0, 0)
+
 for year in range(2000, 2100):
     if yearcounter == 10:
         downshift += 445
@@ -28,7 +31,7 @@ for year in range(2000, 2100):
 
     for month in range(1, 13):
         str1 = plain.formatmonth(year, month)
-        print(str1)
+        # print(str1)
         monthcounter += 1
         d.text((offw + rightshift, offh + downshift), str1, (0, 0, 0))
         offw += 138
@@ -39,7 +42,7 @@ for year in range(2000, 2100):
 
     f = ImageFont.truetype("comic.ttf", 30)
 
-    d.rectangle([(240 + rightshift, 8 + downshift), (330 + rightshift, 45 + downshift)], fill=(0, 0, 0), outline=(0, 0, 0), width=1)
+    d.rectangle([(240 + rightshift, 8 + downshift), (330 + rightshift, 45 + downshift)], fill=year_rect_color, outline=year_rect_outline, width=1)
     d.text((20 + 228 + rightshift, 50 - 45 + downshift), str(year), font=f, fill=(0, 20, 0))
     rightshift += 552
 
