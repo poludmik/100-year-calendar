@@ -55,7 +55,7 @@ font = ImageFont.truetype("../fonts/joystix_monospace.ttf", 50)
 
 txt = Image.new('RGBA', img.size, (255,255,255,0))
 new_layer = ImageDraw.Draw(txt)
-new_layer.text((1240, 880), ascii.AsciiArts.skull, font=font, fill=(0, 0, 0, 100))
+new_layer.text((1320, 880), ascii.AsciiArts.skull, font=font, fill=(0, 0, 0, 100))
 combined = Image.alpha_composite(img, txt)
 
 combined.save('../calendar.png')
