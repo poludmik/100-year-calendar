@@ -5,7 +5,7 @@ import ascii
 counter = 0
 filename = "calendar.png"
 plain = calendar.TextCalendar(calendar.MONDAY)
-f = ImageFont.truetype("comic.ttf", 30)
+f = ImageFont.truetype("../fonts/joystix_monospace.ttf", 26)
 img = Image.new('RGBA', (5540, 4445), (255, 255, 255, 255))
 
 offh = 50
@@ -46,7 +46,7 @@ for year in range(2000, 2100):
             offw = 19
 
     d.rectangle([(238 + rightshift, 8 + downshift), (329 + rightshift, 45 + downshift)], fill=year_rect_color, outline=year_rect_outline, width=1)
-    d.text((20 + 228 + rightshift, 50 - 45 + downshift), str(year), font=f, fill=(0, 20, 0))
+    d.text((12 + 228 + rightshift, 50 - 40 + downshift), str(year), font=f, fill=(0, 20, 0))
     rightshift += 552
 
 
